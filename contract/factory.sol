@@ -40,12 +40,12 @@ contract Factory {
         return tokenAddress;
     }
 
-    function transferToken(address tokenAddress) external {
+    function transferToken(address tokenAddress, uint256 amount) external {
         require(token_owner[tokenAddress] == msg.sender, "Not your token");
         
         IBEP20 token = IBEP20(tokenAddress);  // access token by IBEP20
         
-        uint256 amount = token.balanceOf(address(this));
+        //uint256 amount = token.balanceOf(address(this));
 
         // call token transfer
         bool success = token.transfer(msg.sender, amount);
