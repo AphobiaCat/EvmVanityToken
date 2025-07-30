@@ -1,2 +1,2 @@
 # EvmVanityToken
-can create evm vanity token
+Create A Vanity Address Token In EVM
